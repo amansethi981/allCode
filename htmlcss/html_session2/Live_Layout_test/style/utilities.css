@@ -1,0 +1,34 @@
+/* Text Color */
+
+/* Button */
+.btn{
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+}
+.btn:hover{
+    opacity: 0.9;
+}
+.bg-primary{
+    background-color: FFC033;
+    color: #fff;
+}
+.bg-secondary{
+background-color: #0284d0;
+color: #fff;
+}
+
+/* Flex Item */
+.flex-items{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+.flex-items>div{
+    padding: 20px;
+}

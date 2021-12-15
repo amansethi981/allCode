@@ -1,0 +1,134 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7rem;
+}
+
+.para{
+    display: flex;
+    margin-left: 10%;
+}
+
+.para1{
+    border-right: 1px solid black;
+    font-size: 12px;
+    padding: 2px 5px 5px 10px;
+}
+.header-content{
+    display: flex;
+}
+/* navbar */
+.container{
+    background-color:	#00ff00;
+    overflow: auto;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.container ul{
+    display: flex;
+    list-style: none;
+}
+.container ul li{
+    padding: 15px;
+    margin: auto;
+}
+.container ul li a{
+    text-align: center;
+    display: block;
+}
+/* showcase */
+.showcase{
+    background: url('../img/pexels-nicole-berro-2393789.jpg') no-repeat center center/cover;
+    height: 800px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.showcase-content{
+    padding-top: 170px;
+    text-align: center;
+    color: #fff;
+}
+#content2::before{
+    content: "\a";
+    white-space: pre;
+}
+.showcase .showcase-content p{
+    padding-bottom: 20px;
+    line-height: 1.75em;
+    width: 50%;
+    margin-left: 25%;
+    padding-top: 2%;
+}
+/* button */
+.btn{
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    background: #00ff00;
+    padding: 13px 20px;
+    border: none;
+    cursor: pointer;
+    
+}
+.apply-btn{
+    display: inline-block;
+    font-size: 18px;
+    color: #00ff00;
+    padding: 13px;
+    border: 1px solid #00ff00;
+    cursor: pointer;
+    margin-left: 50px;
+}
+.btn1{
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    padding: 13px 20px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    
+}
+/* card */
+.icons{
+    font-size: 18px;
+    padding: 2px 0px 0px 20px;
+    color: #00ff00;  
+}
+
+.icon{
+    font-size: 18px;
+    padding: 2px 0px 0px 20px;
+    color: #fff;  
+}
+.student-zone{
+    display: flex;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+    height: auto;
+    background-color: brown;
+    margin-top: 25%;
+    float: left;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }
+  .card-continer,.capicon{
+    font-size: 48px;
+    text-align: center;
+    color: #fff;
+  }

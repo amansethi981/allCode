@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var heights = $("div.panel").map(function ()
+    {
+        return $(this).height();
+    }).get();
+
+maxHeight = Math.max.apply(null, heights)
+    </script>
+    <style>
+        div{
+            display: flex;
+        }
+        .panel{
+            background-color: aqua;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            margin-left: 20px;
+                    }
+    </style>
+</head>
+<body>
+    <div>
+    <div class="panel">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit in optio necessitatibus voluptates maxime odit tempore! Magnam modi quos, blanditiis odit incidunt ut cupiditate quam, nihil vitae eligendi perferendis quasi?
+    </div>
+    <div class="panel">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate debitis modi laboriosam maiores tempore rerum autem illo aspernatur velit, architecto fuga. Expedita totam aliquam, laboriosam aperiam dicta nobis molestias excepturi.
+    </div>
+</div>
+</body>
+</html>

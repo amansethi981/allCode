@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+  $("span").click(function(event){
+    event.stopPropagation();
+    console.log("The span element was clicked.");
+  });
+  $("p").click(function(event){
+    console.log("The p element was clicked.");
+  });
+  $("div").click(function(){
+    console.log("The div element was clicked.");
+  });
+});
+    </script>
+</head>
+<body>
+</div>
+<div class="header">
+    This is div element
+    <p style="background-color:pink">
+        This is a p element, in the div element. <br>
+        <span style="background-color:orange">
+            This is a span element in the p and the div element.
+        </span>
+    </p>
+</div>
+</body>
+</html>

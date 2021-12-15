@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    background: url('./img/pexels-ethan-brooke-2128042.jpg') no-repeat center center/cover;
+    height: 100vh;
+    margin-bottom: 20px;
+    position: relative;
+}
+p{
+    color: #fff;
+}
+html{
+    font-family: 'Times New Roman', Times, serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* header{
+    border-bottom: 1px solid #E2E8F0;
+    width: 75vw;
+    
+} */
+.content{
+    text-align: center;
+    color: #fff;
+    padding: 200px 5px 5px 10px;
+}
+.icon:first-child{
+    border-right:2px solid #fff ;
+    margin-right: 40px;
+    padding-right: 40px;
+}
+.icon{
+    padding-top: 20px;
+}
+
+.car-icon{
+    font-size: 38px;
+    color: #00ff00;
+}
+.camera-icon{
+    font-size: 38px;
+    color: #00ff00;
+}
+.icons-grp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.hamburger{
+    display: none;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-item{
+    margin-left: 5rem;
+}
+.nav-link{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+}
+.nav-link:hover{
+    color: #482ff7;
+}
+.nav-logo{
+    font-size: 2.1rem;
+    font-weight: 400;
+    color: #482ff7;
+}
+@media screen and (max-width:768px) {
+    section{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    } 
+    .icons-grp{
+        display: flex;
+        flex-direction:column;
+        margin: auto;
+        padding: auto;
+    }
+    
+    .icon:first-child{
+        border: none;
+        margin-right: -40px;
+        padding-right: -40px;
+    }
+    
+}
+@media only screen and (max-width:768px){
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top:5rem;
+        flex-direction: column;
+        background-color:#00ff00;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0,0.05);
+        transition: 0.3s;
+        
+    }
+    .nav-menu.active{
+        left:0
+    }
+    .nav-item{
+        margin: 2.5rem 0;
+    }
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        -webkit-transform: translateY(8px) rotate(45);
+        transform:translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        -webkit-transform: translateY(-8px) rotate(-45);
+        transform: translateY(-8px) rotate(-45px);
+    }
+}
+section{
+    display: flex;
+}
+img{
+    height: 150px;
+    width: 150px;
+    border-radius: 75%;
+    
+}
+
+.button{
+    background: transparent;
+    border: 2px solid #00ff00;
+    padding: 12px 36px;
+    color: #00ff00;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 20px;
+
+}

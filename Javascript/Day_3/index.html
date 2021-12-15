@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+    const person = {
+    name: 'Wes',
+    job: 'Web Developer',
+    city: 'Hamilton',
+    bio: 'Wes is a really cool guy that loves to teach web development!'
+}
+const song = {
+ name: 'Dying to live',
+artist: 'Tupac', 
+featuring: 'Biggie Smalls'
+ }
+const markup = `
+ <div class="song">
+    <p>${song.name} ${song.artist} ${song.featuring}</p>
+ </div>
+`;
+document.getElementById("demo").innerHTML = markup;
+</script>
+
+</body>
+</html>
+

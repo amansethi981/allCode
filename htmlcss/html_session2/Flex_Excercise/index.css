@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding:0 ;
+    box-sizing: border-box;
+}
+.navbar{
+    background-image: url("./img/pexels-jopwell-2422278.jpg");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px 5px 5px 10px;
+}
+.inner-content{
+    text-align: center;
+}
+.inner-content h1{
+    color: black;
+    font-weight: 600;
+    font-size: 30px;
+}
+.inner-content p{
+    width: 40vw;
+    text-align: justify;
+}
+.img1{
+    background-image: url("./img/pexels-polina-zimmerman-3746932.jpg");
+  background-color: #cccccc;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  width: 20vw;
+  height:40vh;
+  padding: 50px ;
+  margin: 50px 0px 0px 80px;
+  
+}
+.content1{
+    display: flex;
+    
+}
+h1{
+    padding: 50px 0px 0px 50px;
+}
+p{
+    text-align: justify;
+    padding: 20px 0px 0px 50px;
+}
+button{
+    padding: 12px 36px;
+    margin:20px 0px 0px 50px;
+    color: #fff;
+    background-color: teal;
+    border: none;
+    cursor: pointer;
+}
+.message{
+    padding-bottom: 100px;
+}
+.content2{
+    background-color:blue;
+    height: auto;
+    margin-bottom: 100px;
+    padding: auto;
+    display: flex;
+}
+.message1{
+    width: 50vw;
+    padding-bottom: 20px;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+footer #icon-grp{
+    font-size: 28px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+footer #icon-grp .icons{
+padding: 10px;
+cursor: pointer;
+}

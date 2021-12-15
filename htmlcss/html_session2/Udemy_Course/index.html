@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            color: #fff;
+            background-color: aqua;
+            font-size: large;
+        }
+        div{
+            display: none;
+        }
+        @media(max-width:500px){
+            body{
+                background-color: red;
+            }
+            div{
+                display: inline-block;
+            }
+        }
+        @media(min-width:501px) and (max-width:768px){
+            body{
+                background-color: rosybrown;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="mobile">Mobile</div>
+    <div id="tablet">Tablet</div>
+    <div id="smartphone">SmartPhone</div>
+    <div id="landscape">landscape</div>
+</body>
+</html>

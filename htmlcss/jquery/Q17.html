@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $("document").ready(function(){
+            function slider(){
+                const current=$("#slider img.active")
+                if(current.length===0){
+                    $("#slider img:first-child").addClass("active")
+                }
+                else{
+                    const next=$(current).removeClass("active").next()
+                    if(next.length===0){
+                        $("#slider img:first-child").addClass("active")
+                    }
+                    else{
+                        $(next).addClass("active")
+                    }
+                }
+            }
+            setInterval(slider,1000)
+        })
+    </script>
+    <style>
+        #slider{
+            width: 400px;
+            position: relative;
+        }
+        #slider img{
+            max-width: 100%;
+            position: absolute;
+            top:0;
+            left: 0;
+            opacity: 0;
+            transition: 0.1s;
+        }
+        #slider img.active{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="slider">
+        <img src="https://i.picsum.photos/id/898/200/300.jpg?hmac=t4CBtj0-seR5dcy3U9f3RETPJo3tVYgUSvwcMV-cL-o"
+        class="active" />
+        <img src="https://i.picsum.photos/id/529/200/200.jpg?hmac=LiB-rmOEJ-iPyye6kU2u9mmHGs_o7w5wrCHbzlNX5b0"
+        />
+        <img src="https://i.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI"
+        />
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 5px;
+  text-align: left;
+}
+.container {
+  display: flex;
+  background-color: blue;
+  flex-direction: column;
+                                                                
+}
+.container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}

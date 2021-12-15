@@ -1,0 +1,79 @@
+db.person.aggregate([
+    {$match:{gender:"female}},
+    {$group:{_id:{state:"$location.state"},totalPersons:{$sum:1}}},
+      {$sort:{totalPersons:-1}}
+])
+
+
+db.persons.aggregate([
+    {$project:{_id:0,gender:1,fullName:($concat:{"$name.first"," ","$name.last"})}}
+])
+
+fullName:{$toUpper:"$name.first}
+fullName:{$toUpper:{$substrSP:["$name.first",0,1]}}
+
+db.persons.aggregate({
+    {$project:{_id:0,name:1,email:1,location:{type:"Point,coordinates:[$convert:{input:"$location.coordinates.longitude",to:"double",onError:0.0,OnNull:0.0},"$location.coordinates.latitude"]}}}
+})
+
+db.person.aggregate([
+    {$group:{_id:{birthYear:{$isoWeekYear:"$birthdate"}},numPersons:{$sum:1}}}
+])
+
+db.persons.aggregate([
+    {$group:{_id:{age:"$age"},allHobbies:{$push:"$hobbies"}}}
+])
+
+db.friends.aggregate([
+    {$project:{_id:0,examScore:{$slice:["$examScore",-2,1]}}}
+])
+
+geting a length of array
+db.friends.aggregate([
+    {$project:{_id:0.maxScores:{$size:"$examscores"}}}
+])
+
+filter of array
+db.friends.aggregate([
+   {
+      "$project":{
+         "_id":0,
+         "scores":{
+            "$filter":{
+               "input":"$examScores",
+               "as":"asc",
+               "cond":{
+                  "$gt":[
+                     "$$asc.score",
+                     60
+                  ]
+               }
+            }
+         }
+      }
+   }
+])
+
+//mulitple operation of array
+db.friends.aggregate([
+    {$unwind:"$examScore"},
+    {$project:{_id:1,name:1,age:1,scores:"$examScores.score}},
+    {$sort:{score:-1}},
+    {$group:{_id:"$_id",name:{$first:"$name"},maxScore:{$max:"$score"}}},
+    {$sort:{maxSxore:-1}}
+])
+
+db.friends.aggregate3([
+    {
+        $geoNear:{
+            near:{
+                type:'Point',
+                coordinates:[-18,4,-42.8]
+            },
+            maxDistance:1000,
+            num:10,
+            query:{gender:"female"},
+            distanceField:"distance"
+        }
+    }
+])

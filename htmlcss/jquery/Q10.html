@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $("document").ready(function(){
+            $("#flip").hover(function(){
+                
+                $(".panel").slideToggle("slow")
+            })
+        })
+    </script>
+    <style>
+        #flip{
+            padding: 5px;
+            text-align: center;
+            background-color: #555;
+            border: 1px solid black;
+        }
+        .panel{
+            padding: 20px;;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="flip">
+        Hover
+    </div>
+    <div class="panel">
+        Pizza
+    </div>
+    <div>
+        Burger
+    </div>
+</body>
+</html>

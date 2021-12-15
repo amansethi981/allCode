@@ -1,0 +1,8 @@
+JavaScript isn't a classed-based langauge – it's is a prototype-based langauge.
+usage of function
+1.It can use datatype
+2.It can use as variable
+3.It can use arguments
+
+bind() set the values of a function
+apply()The only difference is that the arguments are taken as an array.
